@@ -16,7 +16,6 @@
   --indent-x: var(--indent-y);
   --indent-y: 32px;
   --items: 4;
-
 }
 /* Base styles */
 body {
@@ -256,7 +255,6 @@ svg {
   margin-right: auto;
 }
 
-
 .ingridients-item {
   border-radius: 15px;
   padding: 28px 23px;
@@ -297,6 +295,11 @@ svg {
 .made {
   padding: 60px 0;
 }
+
+.made-container {
+  display: flex;
+  gap: 20px;
+}
 .made-img {
 }
 .made-wrapper {
@@ -332,11 +335,13 @@ svg {
 .products-title {
 }
 .products-list {
+  --indent-x: 24px;
+  --indent-y: 18px;
 }
 .products-item {
   background-color: var(--light-color);
   padding: 32px 20px;
-  width: 270px;
+
   border-radius: 15px;
   border: 1px solid rgba(17, 17, 17, 0.1);
   text-align: center;

@@ -12,6 +12,11 @@
   --light-bg-color: #fafafa;
   --dark-bg-color: #1e1823;
   --primary-bg-color: #fcf1e0;
+  /*  Card-set parameters */
+  --indent-x: var(--indent-y);
+  --indent-y: 32px;
+  --items: 4;
+
 }
 /* Base styles */
 body {
@@ -104,6 +109,18 @@ svg {
 
   width: 1168px;
   padding: 0 16px;
+}
+
+/* Card set */
+
+.card-set {
+  display: flex;
+  row-gap: var(--indent-x);
+  column-gap: var(--indent-y);
+  flex-wrap: wrap;
+}
+.card-item {
+  width: calc((100% - (var(--items) - 1) * var(--indent-y)) / var(--items));
 }
 
 /* Header section */
@@ -229,6 +246,9 @@ svg {
   padding-top: 120px;
   padding-bottom: 60px;
 }
+.ingridients-container {
+  display: flex;
+}
 
 .ingridients-title {
   width: 412px;
@@ -236,13 +256,11 @@ svg {
   margin-right: auto;
 }
 
-.ingridients-list {
-}
+
 .ingridients-item {
   border-radius: 15px;
   padding: 28px 23px;
   background-color: var(--light-color);
-  width: 260px;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.28;

@@ -376,15 +376,27 @@ svg {
 }
 /* Bestsellers section */
 .bestsellers {
+  padding: 60px 0;
 }
 .bestsellers-title {
 }
 .bestsellers-list {
+  display: flex;
+  gap: 16px;
 }
 .bestsellers-list-item {
-  background-color: var(--light-color);
+  width: calc((100% - 32px) / 3);
 }
 .bestsellers-list-img {
+  border-radius: 15px 15px 0px 0px;
+}
+.bestsellers-list-wraper {
+  padding: 28px;
+  border-radius: 0px 0px 15px 15px;
+  border-right: 1px solid rgba(17, 17, 17, 0.1);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+  border-left: 1px solid rgba(17, 17, 17, 0.1);
+  background: var(--light-color);
 }
 .bestsellers-list-caption {
   font-weight: 600;
@@ -392,6 +404,7 @@ svg {
   line-height: 1.33;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+  text-align: center;
 }
 
 /* Reviews section */

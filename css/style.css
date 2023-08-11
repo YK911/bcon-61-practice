@@ -12,6 +12,10 @@
   --light-bg-color: #fafafa;
   --dark-bg-color: #1e1823;
   --primary-bg-color: #fcf1e0;
+  /*  Card-set parameters */
+  --indent-x: var(--indent-y);
+  --indent-y: 32px;
+  --items: 4;
 }
 /* Base styles */
 body {
@@ -106,13 +110,34 @@ svg {
   padding: 0 16px;
 }
 
+/* Card set */
+
+.card-set {
+  display: flex;
+  row-gap: var(--indent-x);
+  column-gap: var(--indent-y);
+  flex-wrap: wrap;
+}
+.card-item {
+  width: calc((100% - (var(--items) - 1) * var(--indent-y)) / var(--items));
+}
+
 /* Header section */
 
 .header {
 }
+
+.header-container {
+  display: flex;
+}
+
 .header-nav {
+  display: flex;
+  gap: 365px;
 }
 .header-logo {
+  display: flex;
+  align-items: center;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.11;
@@ -124,16 +149,26 @@ svg {
 .header-logo-image {
 }
 .header-list {
+  display: flex;
+  gap: 24px;
+  align-items: center;
 }
 .header-item {
 }
 .header-item-link {
+  display: block;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: -0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .header-socials {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: auto;
 }
 .socials {
 }
@@ -141,6 +176,7 @@ svg {
 }
 .socials-link {
   display: block;
+
   width: 40px;
   height: 40px;
   padding: 8px 8px;
@@ -209,6 +245,9 @@ svg {
   padding-top: 120px;
   padding-bottom: 60px;
 }
+.ingridients-container {
+  display: flex;
+}
 
 .ingridients-title {
   width: 412px;
@@ -216,13 +255,10 @@ svg {
   margin-right: auto;
 }
 
-.ingridients-list {
-}
 .ingridients-item {
   border-radius: 15px;
   padding: 28px 23px;
   background-color: var(--light-color);
-  width: 260px;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.28;
@@ -257,13 +293,27 @@ svg {
 
 /* Made Section */
 .made {
+  padding: 60px 0;
+}
+
+.made-container {
+  display: flex;
+  gap: 20px;
 }
 .made-img {
+}
+.made-wrapper {
+  padding: 32px;
+  background-color: var(--light-color);
+  border-radius: 15px;
+  width: 516px;
 }
 .made-subtitle {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.33;
+  width: 350px;
+  margin-bottom: 28px;
 }
 .made-list {
 }
@@ -271,17 +321,30 @@ svg {
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  padding-left: 16px;
+}
+.made-list-item:last-child {
+  margin-bottom: 0;
 }
 
 /* Products section */
 .products {
+  padding: 60px 0;
 }
 .products-title {
 }
 .products-list {
+  --indent-x: 24px;
+  --indent-y: 18px;
 }
 .products-item {
   background-color: var(--light-color);
+  padding: 32px 20px;
+
+  border-radius: 15px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  text-align: center;
 }
 .products-img {
 }
@@ -291,29 +354,49 @@ svg {
   line-height: 1.33;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+  margin-bottom: 2px;
+  margin-top: 8px;
 }
 .products-desc {
   color: var(--main-color-70);
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: -0.02em;
+  margin-bottom: 18px;
 }
 .products-price {
   font-size: 14px;
   font-weight: 600;
   background-color: var(--light-bg-color);
+  padding: 8px 20px;
+  border-radius: 100px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  width: fit-content;
+  margin: 0 auto;
 }
 /* Bestsellers section */
 .bestsellers {
+  padding: 60px 0;
 }
 .bestsellers-title {
 }
 .bestsellers-list {
+  display: flex;
+  gap: 16px;
 }
 .bestsellers-list-item {
-  background-color: var(--light-color);
+  width: calc((100% - 32px) / 3);
 }
 .bestsellers-list-img {
+  border-radius: 15px 15px 0px 0px;
+}
+.bestsellers-list-wraper {
+  padding: 28px;
+  border-radius: 0px 0px 15px 15px;
+  border-right: 1px solid rgba(17, 17, 17, 0.1);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+  border-left: 1px solid rgba(17, 17, 17, 0.1);
+  background: var(--light-color);
 }
 .bestsellers-list-caption {
   font-weight: 600;
@@ -321,25 +404,38 @@ svg {
   line-height: 1.33;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+  text-align: center;
 }
 
 /* Reviews section */
 .reviews {
+  padding: 60px 0 120px 0;
 }
 .reviews-title {
+  margin-bottom: 91px;
 }
 .reviews-list {
+  --indent-y: 28px;
+  --items: 3;
 }
 .reviews-list-item {
   background-color: var(--light-color);
+  border-radius: 15px;
+  border: 1px solid rgba(17, 17, 17, 0.10);
+  box-shadow: 0px 9px 100px 0px rgba(17, 17, 17, 0.03);
+  padding: 24px;
 }
 .reviews-list-avatar {
+  margin: 0 auto;
+  margin-bottom: 18px;
+  margin-top: -66px;
 }
 .reviews-list-author {
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
   text-align: center;
+  margin-bottom: 24px;
 }
 .reviews-list-text {
   font-size: 14px;
@@ -347,6 +443,11 @@ svg {
   text-align: center;
   letter-spacing: -0.02em;
   color: var(--main-color-70);
+}
+.reviews-btn{
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
 /* Footer section */

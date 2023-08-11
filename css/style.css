@@ -353,6 +353,12 @@ svg {
 .footer {
   background-color: var(--dark-bg-color);
 }
+
+.footer-top {
+  display: flex;
+  align-items: baseline;
+}
+
 .footer-slogan {
   font-weight: 500;
   font-size: 28px;
@@ -410,4 +416,9 @@ svg {
   text-align: center;
   letter-spacing: -0.02em;
   color: var(--light-color);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: baseline;
 }

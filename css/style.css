@@ -421,7 +421,7 @@ svg {
 .reviews-list-item {
   background-color: var(--light-color);
   border-radius: 15px;
-  border: 1px solid rgba(17, 17, 17, 0.10);
+  border: 1px solid rgba(17, 17, 17, 0.1);
   box-shadow: 0px 9px 100px 0px rgba(17, 17, 17, 0.03);
   padding: 24px;
 }
@@ -444,7 +444,7 @@ svg {
   letter-spacing: -0.02em;
   color: var(--main-color-70);
 }
-.reviews-btn{
+.reviews-btn {
   display: block;
   margin: 0 auto;
   margin-top: 50px;
@@ -453,8 +453,19 @@ svg {
 /* Footer section */
 .footer {
   background-color: var(--dark-bg-color);
+  padding: 50px 0px;
 }
+
+.footer-top {
+  padding-bottom: 50px;
+  margin-bottom: 42px;
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: baseline;
+}
+
 .footer-slogan {
+  width: 300px;
   font-weight: 500;
   font-size: 28px;
   line-height: 1.21;
@@ -465,20 +476,26 @@ svg {
   color: var(--accent-color);
 }
 .footer-address {
+  margin-left: auto;
   font-style: normal;
+  display: flex;
+  gap: 50px;
 }
+
 .footer-address-subject {
+  margin-bottom: 14px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
-  text-align: center;
   color: var(--light-color);
 }
 .footer-socials {
 }
-.footer-contatcs {
+.footer-contacts {
 }
 .footer-menu {
+  display: flex;
+  gap: 24px;
 }
 .footer-menu-item {
 }
@@ -492,18 +509,33 @@ svg {
 
 /* Socials */
 .socials {
+  display: flex;
+  gap: 14px;
 }
 .socials-item {
 }
 .socials-link {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .socials-icon {
+  fill: none;
+  stroke: var(--light-color);
+}
+
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  stroke: var(--accent-color);
 }
 
 /* Contacts */
 .contacts {
 }
-.contacts-item {
+.contacts-item:not(:last-child) {
+  margin-bottom: 4px;
 }
 .contacts-link {
   font-size: 14px;
@@ -511,4 +543,9 @@ svg {
   text-align: center;
   letter-spacing: -0.02em;
   color: var(--light-color);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: baseline;
 }

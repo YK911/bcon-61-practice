@@ -221,10 +221,39 @@ svg {
   padding: 50px 0px;
   background-color: var(--dark-bg-color);
 }
+.benefits-container{
+  width: 1132px;
+}
 .benefits-list {
+  display: flex;
+  justify-content: space-between;
 }
 .benefits-item {
+  position: relative;
   width: 308px;
+}
+.benefits-item:not(:last-child)::after{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -44px;
+  display: block;
+  content: '';
+  width: 1px;
+  height: 124px;
+  background: rgba(255, 255, 255, 0.50);
+}
+.benefints-svg-wrapper{
+  margin-bottom: 22px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 62px;
+  height: 62px;
+  border: 1px solid rgba(255, 255, 255, 0.50);
+  border-radius: 50%;
 }
 .benefits-subtitle {
   margin-bottom: 18px;

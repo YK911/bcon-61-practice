@@ -578,3 +578,36 @@ svg {
   display: flex;
   align-items: baseline;
 }
+
+/* Modal */
+
+.backdrop {
+}
+.modal {
+}
+.modal-button-close {
+}
+.modal-button-icon {
+}
+.modal-title {
+}
+.modal-title-accent {
+}
+.modal-form {
+}
+.modal-label {
+}
+.modal-box {
+}
+.modal-input {
+}
+.modal-agreement {
+}
+.modal-checkbox {
+}
+.modal-agreement-link {
+}
+.btn {
+}
+.btn-accent {
+}

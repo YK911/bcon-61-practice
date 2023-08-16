@@ -133,11 +133,11 @@
           <h2 hidden>Benefits of our chocolate</h2>
           <ul class="benefits-list">
             <li class="benefits-item">
-             <div class="benefints-svg-wrapper">
-              <svg class="benefits-icon" width="32" height="32">
-                <use href="./images/sprite.svg#icon-chocolate"></use>
-              </svg>
-             </div>
+              <div class="benefints-svg-wrapper">
+                <svg class="benefits-icon" width="32" height="32">
+                  <use href="./images/sprite.svg#icon-chocolate"></use>
+                </svg>
+              </div>
               <h3 class="benefits-subtitle">Unsurpassed taste</h3>
               <p class="benefits-text">
                 Crafted with the finest quality cocoa beans and a dedication to perfection, each
@@ -490,5 +490,64 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop">
+      <div class="modal">
+        <button class="modal-button-close" aria-label="modal close button">
+          <svg class="modal-button-icon" width="28" height="28">
+            <use href="./images/sprite.svg#icon-x-close"></use>
+          </svg>
+        </button>
+        <strong class="modal-title"
+          >LEAVE A REVIEW ABOUT <span class="modal-title-accent">OUR CHOCOLATE</span></strong
+        >
+        <form class="modal-form">
+          <label for="user_name" class="modal-label">Name</label>
+          <div class="modal-box">
+            <input id="user_name" type="text" class="modal-input" required minlength="3" placeholder=" "/>
+            <svg class="modal-input-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-user"></use>
+            </svg>
+          </div>
+
+          <label for="user_email" class="modal-label">Email</label>
+          <div class="modal-box">
+            <input id="user_email" type="email" class="modal-input" required placeholder=" "/>
+            <svg class="modal-input-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-mail"></use>
+            </svg>
+          </div>
+
+          <label for="user_number" class="modal-label">Phone number</label>
+          <div class="modal-box">
+            <input id="user_number" type="tel" class="modal-input" required placeholder=" " pattern="^\d{10}$"/>
+            <svg class="modal-input-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+          </div>
+
+          <label for="user_comment" class="modal-label" required minlength="3">Comment</label>
+          <textarea
+            id="user_comment"
+            type="text"
+            class="modal-field"
+            placeholder="Enter text"
+            minlength="3"
+            required
+          ></textarea>
+          <label class="modal-agreement">
+            <input type="checkbox" class="modal-checkbox" />
+            <svg class="agreement-check" width="24" height="24">
+              <use class="uncheck" href="./images/sprite.svg#icon-box"></use>
+              <use class="check" href="./images/sprite.svg#icon-check"></use>
+            </svg>
+            <span>
+              I accept the terms and conditions of the
+              <a href="#" class="modal-agreement-link">Privacy Policy</a>
+            </span>
+          </label>
+          <button type="submit" class="btn btn-accent">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
